@@ -1,0 +1,34 @@
+.click-button{
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 61px;
+    color: #fff;
+    font-weight: 700;
+    height: 43px;
+    margin: 10px;
+    width: 250px;
+    font-family: Roboto, sans-serif;
+}
+.click-button:hover {
+    background-image: linear-gradient(midnightblue, rebeccapurple);
+    border: none;
+    cursor: pointer;
+      
+    }
+.reset-button{
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 61px;
+    color: #fff;
+    font-weight: 700;
+    height: 43px;
+    margin: 10px;
+    width: 250px;
+    font-family: Roboto, sans-serif;
+}
+.reset-button:hover {
+    background-image: linear-gradient(midnightblue, rgb(51, 122, 153));
+    border: none;
+    cursor: pointer;
+ }
+
