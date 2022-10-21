@@ -51,6 +51,12 @@ const  multiplication = () => {
   setResult(number*number1)
 }
 
+const  restartAll = () => {
+  setNumber(0)
+  setNumber1(0)
+  setResult(0)
+}
+
   return (
     <div className='App'>
      <div className='freecodecamp-logo-container'>
@@ -108,6 +114,10 @@ const  multiplication = () => {
       isClickButton={false}
       handleClick={multiplication}/>
      </div>
+     <Button
+      text='Restart all numbers'
+      isClickButton={false}
+      handleClick={restartAll}/>
     </div>
     
   );
