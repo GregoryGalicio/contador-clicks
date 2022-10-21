@@ -3,15 +3,49 @@ import Button from './components/button/Button';
 import freeCodeCampLogo from './imagenes/freecodecamp-logo.png'
 // import { useState } from 'react';
 import Counter from './components/counter/Counter';
+import { useState } from 'react';
 
 function App() {
 
-const  handleClick1 = () => {
-  console.log('Click')
+  const [number, setNumber] = useState(0)
+  const [number1, setNumber1] = useState(0)
+  const [result, setResult] = useState(0)
+  // const [subtraction, setSubtraction = useState(0);
+  // const [multiplication, setMultiplication = useState(0);
+
+ 
+
+const  increase = () => {
+  setNumber(number+1)
+}
+const decrease = () => {
+  setNumber(number-1)
 }
 
 const  resetCounter = () => {
-  console.log('Reiniciar')
+  setNumber(0)
+}
+const  increase1 = () => {
+  setNumber1(number1+1)
+}
+const decrease1 = () => {
+  setNumber1(number1-1)
+}
+const  resetCounter1 = () => {
+  setNumber1(0)
+}
+
+/*Funciones para calculo*/
+const  addition = () => {
+  setResult(number+number1)
+}
+
+const  subtraction = () => {
+  setResult(number-number1)
+}
+
+const  multiplication = () => {
+  setResult(number*number1)
 }
 
   return (
@@ -25,19 +59,54 @@ const  resetCounter = () => {
      </div>
      <div className='principal-container'>
       <Counter
-      clicksNumber='5'
-      />
+      clicksNumber={number} />
       <Button
-      text='Click'
+      text='Increase'
       isClickButton={true}
-      handleClick={handleClick1}/>
-      
+      handleClick={increase}/>
+      <Button
+      text='Decrease'
+      isClickButton={true}
+      handleClick={decrease}/>
       <Button
       text='Restart'
       isClickButton={false}
       handleClick={resetCounter}/>
      </div>
+     <div className='principal-container'>
+      <Counter
+      clicksNumber={number1} />
+      <Button
+      text='Increase'
+      isClickButton={true}
+      handleClick={increase1}/>
+      <Button
+      text='Decrease'
+      isClickButton={true}
+      handleClick={decrease1}/>
+      <Button
+      text='Restart'
+      isClickButton={false}
+      handleClick={resetCounter1}/>
+     </div>
+     <div className='principal-container'>
+      <Counter
+      clicksNumber={result} />
+      <Button
+      text='Addition'
+      isClickButton={true}
+      handleClick={addition}/>
+      <Button
+      text='Subtraction'
+      isClickButton={true}
+      handleClick={subtraction}/>
+      <Button
+      text='Multiplication'
+      isClickButton={false}
+      handleClick={multiplication}/>
+     </div>
     </div>
+    
   );
 }
 
