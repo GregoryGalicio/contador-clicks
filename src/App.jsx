@@ -10,29 +10,32 @@ function App() {
   const [number, setNumber] = useState(0)
   const [number1, setNumber1] = useState(0)
   const [result, setResult] = useState(0)
-  // const [subtraction, setSubtraction = useState(0);
-  // const [multiplication, setMultiplication = useState(0);
-
  
 
 const  increase = () => {
   setNumber(number+1)
+  setResult(0)
 }
 const decrease = () => {
   setNumber(number-1)
+  setResult(0)
 }
 
 const  resetCounter = () => {
   setNumber(0)
+  setResult(0)
 }
 const  increase1 = () => {
   setNumber1(number1+1)
+  setResult(0)
 }
 const decrease1 = () => {
   setNumber1(number1-1)
+  setResult(0)
 }
 const  resetCounter1 = () => {
   setNumber1(0)
+  setResult(0)
 }
 
 /*Funciones para calculo*/
